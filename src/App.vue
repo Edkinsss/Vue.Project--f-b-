@@ -15,7 +15,7 @@
 <v-list dense>
     <v-list-item v-for="link in links" :key="link.title">
     <template v-slot:prepend>
-    <v-icon icon="mdi-cake-variant"></v-icon>
+    <v-icon icon="link.icon"></v-icon>
     </template>
     <v-list-item-title>{{ link.title }}</v-list-item-title>
     </v-list-item>
