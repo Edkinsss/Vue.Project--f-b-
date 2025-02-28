@@ -5,7 +5,7 @@
         <v-flex xs12>
           <v-carousel>
             <v-carousel-item
-              v-for="ad in ads"
+              v-for="ad in promoAds"
               :key="ad.id"
               :src="ad.src"
             >
@@ -57,8 +57,14 @@
 
 <script>
 export default {
-  data() {
-    return {
+  computed: {
+    promoAds(){
+      return this.$store.getters.promo.Ads
+    },
+    ads(){
+      return this.$store.getters.ads
+    }
+    /*return {
       ads: [
         {
           title: "First",
@@ -89,7 +95,7 @@ export default {
           id: "4"
         }
       ]
-    };
+    };*/
   }
 };
 </script>

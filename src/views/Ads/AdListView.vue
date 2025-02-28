@@ -3,7 +3,7 @@
       <v-row justify="center">
         <v-col cols="12" sm="8" lg="6">
           <h1 class="text--secondary mb-3 mt-3">My ads</h1>
-          <v-card v-for="ad in ads" :key="ad.id" class="mb-3" max-width="1000">
+          <v-card class="elevation-10 mb-5" v-for="ad in myAds" :key="ad.id">
             <v-row>
                 <v-col xs="4">
                     <v-img :src="ad.src" height="175px" cover></v-img>
@@ -27,8 +27,12 @@
   
   <script>
   export default {
-    data() {
-      return {
+    computed: {
+      myAds(){
+        return this.$store.getters.myAds
+      }
+    }
+      /*return {
         adds: [
           {
             title: "First",
@@ -59,7 +63,6 @@
             id: "4"
           }
         ]
-      };
+      };*/
     }
-  };
   </script>
