@@ -3,7 +3,7 @@
       <v-row>
         <v-col cols="12">
             <v-card class="mt-5">
-            <v-img height="400px" src="https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg"cover></v-img>
+            <v-img height="300px" src="https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg"cover></v-img>
 
             <v-card-text>
                 <h1 class="text--primary mb-3">Lorem Ipsum</h1>
