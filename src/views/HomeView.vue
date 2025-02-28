@@ -96,12 +96,12 @@ export default {
 
 <style scoped>
 .ad-link {
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
+  position: center;
+  bottom: 10px;
+  left: 1000%;
   background: rgba(0, 0, 0, 0.5);
   transform: translate(-50%, 0);
-  padding: 5px 15px;
+  padding: 15px 400px;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
