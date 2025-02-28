@@ -4,22 +4,23 @@
       <v-col cols="12" sm="8" lg="6">
         <h1 class="text--secondary mb-3 mt-3">Orders</h1>
         <v-list subheader two-line flat>
-            <v-list-item>
+            <v-list-item v-for="order in orders"
+            :key="order.id">
                 <template v-slot:prepend>
                     <v-list-item-action>
                         <v-checkbox
-                            input-value="false"
+                            :input-value="order.done"
                             color="primary"
                         ></v-checkbox>
                     </v-list-item-action>
                 </template>
 
-                <v-list-item-title>Title</v-list-item-title>
-                <v-list-item-subtitle>Phone</v-list-item-subtitle>
+                <v-list-item-title>{{ order.name }}</v-list-item-title>
+                <v-list-item-subtitle>{{ order.phone }}</v-list-item-subtitle>
 
                 <template v-slot:append>
                     <v-list-item-action>
-                        <v-btn class="primary">Open</v-btn>
+                        <v-btn class="primary" :to="'/ad/' + order.adld">Open</v-btn>
                     </v-list-item-action>
                 </template>
             </v-list-item>
@@ -33,6 +34,15 @@
   export default {
     data () {
       return {
+        orders: [
+            {
+                id:"123",
+                name:"Edkinss",
+                phone:"+7(978)517-59-55",
+                adld:"1",
+                done: true
+            }
+        ]
       }
     }
   }
