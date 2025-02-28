@@ -55,11 +55,27 @@
     </v-container>
   </template>
   
-  <script>
-  export default {
-    data () {
-      return {
+<script>
+export default {
+  data() {
+    return {
+      valid: false,
+      title: "",
+      description: "",
+      promo: true,
+    };
+  },
+  methods: {
+    createAd() {
+      if (this.$refs.form.validate()) {
+        const ad = {
+          title: this.title,
+          desc: this.description,
+          promo: this.promo,
+        };
+        console.log(ad);
       }
-    }
-  }
-  </script>
+    },
+  },
+};
+</script>
