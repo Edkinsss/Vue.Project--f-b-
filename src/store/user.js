@@ -83,6 +83,7 @@ class User {
           throw error;
         }
       },
+      
       logoutUser({commit}) {
         commit('setUser', null)
       }
