@@ -71,7 +71,11 @@ export default {
                 })
                 this.modal = false
             }
+        },
+
+        isOwner () {
+            return this.ad.ownerId === this.$store.getters.user.id
         }
-        }
+    }
 }
 </script>
