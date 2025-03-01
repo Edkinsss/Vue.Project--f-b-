@@ -31,28 +31,33 @@
     </v-container>
 </template>
   
-  <script>
-  export default {
-    data () {
-      return {
-        methods: {
-            markDone(order){
-            order.done = !order.done;
+<script>
+export default {
+    data() {
+        // return {
+        //     orders: [
+        //         {
+        //             id: "123",
+        //             name: "Edkinss",
+        //             phone: "+7(978)517-59-55",
+        //             adId: "1",
+        //             done: true
+        //         }
+        //     ]
+        // }
+    },
+
+    methods: {
+        markDone(order) {
+            order.done = !order.done
             console.log(order.done)
-            },
+        }
+    },
 
-        },
-
-        orders: [
-            {
-                id:"123",
-                name:"Edkinss",
-                phone:"+7(978)517-59-55",
-                adld:"1",
-                done: true
-            }
-        ]
-      }
-    }
-  }
-  </script>
+    computed: {
+        orders() {
+            return this.$store.getters.orders
+        }
+    },
+}
+</script>
